@@ -52,8 +52,9 @@ test.describe('omnichannel-transcript', () => {
 			await agent.poHomeChannel.sidenav.openChat(newUser.name);
 		});
 
-		await test.step('Expect to be able to create transcript', async () => {
+		await test.step('Expect to be able to send transcript to email', async () => {
 			await agent.poHomeChannel.content.btnSendTranscript.click();
+			await agent.poHomeChannel.content.btnSendTranscriptToEmail.click();
 			await agent.poHomeChannel.content.btnModalConfirm.click();
 			await expect(agent.poHomeChannel.toastSuccess).toBeVisible();
 		});

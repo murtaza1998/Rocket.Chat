@@ -126,6 +126,10 @@ export class HomeContent {
 		return this.page.locator('[data-qa-id="ToolBoxAction-mail-arrow-top-right"]');
 	}
 
+	get btnSendTranscriptToEmail(): Locator {
+		return this.page.locator('li.rcx-option >> text="Send via email"');
+	}
+
 	get btnCannedResponses(): Locator {
 		return this.page.locator('[data-qa-id="ToolBoxAction-canned-response"]');
 	}
